@@ -5,13 +5,13 @@ from PIL import Image, ImageDraw
 img_basic = Image.open('./basic.png')
 draw_basic = ImageDraw.Draw(img_basic)
 
-img_adv = Image.open('./full.png')
+img_adv = Image.open('./advanced.png')
 draw_adv = ImageDraw.Draw(img_adv)
 
-img_wine_basic = Image.open('./how-to-choose-sake-basic_wine.png')
+img_wine_basic = Image.open('./basic_wine.png')
 draw_wine_basic = ImageDraw.Draw(img_wine_basic)
 
-img_wine_adv = Image.open('./how-to-choose-sake_wine.png')
+img_wine_adv = Image.open('./advanced_wine.png')
 draw_wine_adv = ImageDraw.Draw(img_wine_adv)
 
 
@@ -106,15 +106,15 @@ pic_margin_adv = 230
 pic_width_adv = 1010
 
 start_x_adv, start_y_adv = pic_margin_adv+(pic_width_adv/100)*type, 0
-type_x_adv, type_y_adv = pic_margin_adv+(pic_width_adv/100)*type, 46
-rice_x_adv, rice_y_adv = pic_margin_adv+(pic_width_adv/100)*rice, 145
-shubo_x_adv, shubo_y_adv = pic_margin_adv+(pic_width_adv/100)*shubo, 245
-yeast_x_adv, yeast_y_adv = pic_margin_adv+(pic_width_adv/100)*yeast, 346
-result_x_adv, result_y_adv = pic_margin_adv+(pic_width_adv/100)*result, 442 
-amino_x_adv, amino_y_adv = pic_margin_adv+(pic_width_adv/100)*amino, 520
-acid_x_adv, acid_y_adv = pic_margin_adv+(pic_width_adv/100)*acid, 580
-smv_x_adv, smv_y_adv = pic_margin_adv+(pic_width_adv/100)*smv, 642
-body_x_adv, body_y_adv = pic_margin_adv+(pic_width_adv/100)*body, 750
+type_x_adv, type_y_adv = pic_margin_adv+(pic_width_adv/100)*type, 55
+rice_x_adv, rice_y_adv = pic_margin_adv+(pic_width_adv/100)*rice, 155
+shubo_x_adv, shubo_y_adv = pic_margin_adv+(pic_width_adv/100)*shubo, 255
+yeast_x_adv, yeast_y_adv = pic_margin_adv+(pic_width_adv/100)*yeast, 360
+result_x_adv, result_y_adv = pic_margin_adv+(pic_width_adv/100)*result, 470 
+amino_x_adv, amino_y_adv = pic_margin_adv+(pic_width_adv/100)*amino, 545
+acid_x_adv, acid_y_adv = pic_margin_adv+(pic_width_adv/100)*acid, 605
+smv_x_adv, smv_y_adv = pic_margin_adv+(pic_width_adv/100)*smv, 670
+body_x_adv, body_y_adv = pic_margin_adv+(pic_width_adv/100)*body, 780
 
 unknown_1 = [type_unknown, rice_unknown, shubo_unknown, yeast_unknown, amino_unknown]
 
@@ -255,9 +255,9 @@ light_color = "gainsboro"
 
 start_x, start_y = pic_margin+(pic_width/100)*type, 10
 type_x, type_y = pic_margin+(pic_width/100)*type, 72
-rice_x, rice_y = pic_margin+(pic_width/100)*(100-rice), 178
-shubo_x, shubo_y = pic_margin+(pic_width/100)*shubo, 293 
-result_x, result_y = pic_margin+(pic_width/100)*result, 460 
+rice_x, rice_y = pic_margin+(pic_width/100)*(100-rice), 170
+shubo_x, shubo_y = pic_margin+(pic_width/100)*shubo, 290 
+result_x, result_y = pic_margin+(pic_width/100)*result, 530 
 
 
 unknown = [type_unknown, rice_unknown, shubo_unknown]
@@ -271,7 +271,6 @@ for unknown_value in unknown:
         target_drawing.line([(start_x, start_y), (type_x, type_y)], fill = solid_color, width = 8, joint="curve")
     
     if unknown_value and dummy == 0:
-        print("Hello")
         target_drawing.line([(start_x, start_y), (type_x, type_y)], fill = light_color, width = 8, joint="curve")
     
     if unknown_value and dummy == 1:
@@ -323,15 +322,15 @@ pic_margin_adv = 230
 pic_width_adv = 1010
 
 start_x_adv, start_y_adv = pic_margin_adv+(pic_width_adv/100)*type, 0
-type_x_adv, type_y_adv = pic_margin_adv+(pic_width_adv/100)*type, 46
-rice_x_adv, rice_y_adv = pic_margin_adv+(pic_width_adv/100)*(100-rice), 145
-shubo_x_adv, shubo_y_adv = pic_margin_adv+(pic_width_adv/100)*shubo, 245
+type_x_adv, type_y_adv = pic_margin_adv+(pic_width_adv/100)*type, 55
+rice_x_adv, rice_y_adv = pic_margin_adv+(pic_width_adv/100)*(100-rice), 155
+shubo_x_adv, shubo_y_adv = pic_margin_adv+(pic_width_adv/100)*shubo, 255
 yeast_x_adv, yeast_y_adv = pic_margin_adv+(pic_width_adv/100)*yeast, 346
-result_x_adv, result_y_adv = pic_margin_adv+(pic_width_adv/100)*result, 442 
-amino_x_adv, amino_y_adv = pic_margin_adv+(pic_width_adv/100)*amino, 520
-acid_x_adv, acid_y_adv = pic_margin_adv+(pic_width_adv/100)*acid, 580
-smv_x_adv, smv_y_adv = pic_margin_adv+(pic_width_adv/100)*smv, 642
-body_x_adv, body_y_adv = pic_margin_adv+(pic_width_adv/100)*body, 750
+amino_x_adv, amino_y_adv = pic_margin_adv+(pic_width_adv/100)*amino, 435
+acid_x_adv, acid_y_adv = pic_margin_adv+(pic_width_adv/100)*acid, 527
+smv_x_adv, smv_y_adv = pic_margin_adv+(pic_width_adv/100)*smv, 627
+body_x_adv, body_y_adv = pic_margin_adv+(pic_width_adv/100)*body, 755
+
 
 unknown_1 = [type_unknown, rice_unknown, shubo_unknown, yeast_unknown, amino_unknown]
 
@@ -393,20 +392,20 @@ for unknown_value in unknown_1:
 
 ### draw result　(fruit or rice)
 
-if not unknown_1[2]:
-    target_drawing.line([(yeast_x_adv, yeast_y_adv), (result_x_adv, result_y_adv)], fill = solid_color, width = 8, joint="curve")
-else:
-    target_drawing.line([(yeast_x_adv, yeast_y_adv), (yeast_x_adv+(result_x_adv-yeast_x_adv)/2, yeast_y_adv+(result_y_adv-yeast_y_adv)/2)], fill = light_color, width = 8, joint="curve")
-    target_drawing.line([(yeast_x_adv+(result_x_adv-yeast_x_adv)/2, yeast_y_adv+(result_y_adv-yeast_y_adv)/2), (result_x_adv, result_y_adv)], fill = solid_color, width = 8, joint="curve") 
+# if not unknown_1[2]:
+#     target_drawing.line([(yeast_x_adv, yeast_y_adv), (result_x_adv, result_y_adv)], fill = solid_color, width = 8, joint="curve")
+# else:
+#     target_drawing.line([(yeast_x_adv, yeast_y_adv), (yeast_x_adv+(result_x_adv-yeast_x_adv)/2, yeast_y_adv+(result_y_adv-yeast_y_adv)/2)], fill = light_color, width = 8, joint="curve")
+#     target_drawing.line([(yeast_x_adv+(result_x_adv-yeast_x_adv)/2, yeast_y_adv+(result_y_adv-yeast_y_adv)/2), (result_x_adv, result_y_adv)], fill = solid_color, width = 8, joint="curve") 
 
 
 ### start dwowing again from result
 
 if not unknown_1[4]:
-    target_drawing.line([(result_x_adv, result_y_adv), (amino_x_adv, amino_y_adv)], fill = solid_color, width = 8, joint="curve")
+    target_drawing.line([(yeast_x_adv, yeast_y_adv), (amino_x_adv, amino_y_adv)], fill = solid_color, width = 8, joint="curve")
 else:
-    target_drawing.line([(result_x_adv, result_y_adv), (result_x_adv+(amino_x_adv-result_x_adv)/2, result_y_adv+(amino_y_adv-result_y_adv)/2)], fill = solid_color, width = 8, joint="curve")
-    target_drawing.line([(result_x_adv+(amino_x_adv-result_x_adv)/2, result_y_adv+(amino_y_adv-result_y_adv)/2), (amino_x_adv, amino_y_adv)], fill = light_color, width = 8, joint="curve") 
+    target_drawing.line([(yeast_x_adv, yeast_y_adv), (yeast_x_adv+(amino_x_adv-yeast_x_adv)/2, yeast_y_adv+(amino_y_adv-yeast_y_adv)/2)], fill = solid_color, width = 8, joint="curve")
+    target_drawing.line([(yeast_x_adv+(amino_x_adv-yeast_x_adv)/2, yeast_y_adv+(amino_y_adv-yeast_y_adv)/2), (amino_x_adv, amino_y_adv)], fill = light_color, width = 8, joint="curve") 
 
 
 unknown_2 = [acid_unknown, smv_unknown]
